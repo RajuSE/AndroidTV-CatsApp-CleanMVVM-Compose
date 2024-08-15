@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="display_small">#FFFFFFFF</color>
+    <color name="text_medium">#FFB0B3B8</color>
+    <color name="text_title">#E4E6EB</color>
+    <color name="body">#B0B3B8</color>
+    <color name="input_background">#3A3B3C</color>
+    <color name="placeholder">#DDDDDD</color>
+    <color name="shimmer">#414243</color>
+    <color name="maincolor">#133047</color>
+    <color name="bottombar_text">#FFF</color>
+    <color name="black_bckg">#25A8A1A1</color>
+
+
+    <color name="onPrimary">#003062</color>
+    <color name="primaryContainer">#00468A</color>
+    <color name="onPrimaryContainer">#D6E3FF</color>
+    <color name="secondary">#BDC7DC</color>
+    <color name="onSecondary">#273141</color>
+    <color name="secondaryContainer">#3E4758</color>
+    <color name="onSecondaryContainer">#D9E3F8</color>
+    <color name="tertiary">#DCBCE1</color>
+    <color name="onTertiary">#3E2845</color>
+    <color name="tertiaryContainer">#563E5C</color>
+    <color name="onTertiaryContainer">#F9D8FE</color>
+    <color name="background">#1A1C1E</color>
+    <color name="onBackground">#E3E2E6</color>
+    <color name="surface">#1A1C1E</color>
+    <color name="onSurface">#E3E2E6</color>
+    <color name="surfaceVariant">#43474E</color>
+    <color name="onSurfaceVariant">#C4C6CF</color>
+    <color name="error">#FFB4AB</color>
+    <color name="onError">#690005</color>
+    <color name="errorContainer">#93000A</color>
+    <color name="onErrorContainer">#FFB4AB</color>
+    <color name="border">#8E9099</color>
+    <color name="transparent">#00000000</color>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="App.Starting.Theme" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="windowSplashScreenBackground">#FFFFFF</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/cats_logo</item>
+        <item name="postSplashScreenTheme">@style/Theme.CatsForever</item>
+    </style>
+
+</resources>
