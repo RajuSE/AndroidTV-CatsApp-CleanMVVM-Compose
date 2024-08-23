@@ -8,7 +8,7 @@ class UpsertCat @Inject constructor(
     private val catsDao: CatsDao
 ) {
 
-    suspend operator fun invoke(cat: CatBreedsResponseItem){
+     operator fun invoke(cat: CatBreedsResponseItem){
         catsDao.upsert(cat = cat)
     }
 

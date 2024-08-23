@@ -8,7 +8,7 @@ class GetCatDetailsFromDB @Inject constructor(
     private val catsDao: CatsDao
 ) {
 
-    suspend operator fun invoke(id: String): CatBreedsResponseItem?{
+     operator fun invoke(id: String): CatBreedsResponseItem?{
         return catsDao.getCat(id = id)
     }
 

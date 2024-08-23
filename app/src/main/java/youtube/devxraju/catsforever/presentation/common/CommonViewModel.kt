@@ -6,6 +6,8 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import youtube.devxraju.catsforever.data.remote.dto.CatBreedsResponseItem
 import youtube.devxraju.catsforever.domain.usecases.cats.GetCatDetailsFromDB
@@ -32,7 +34,7 @@ class CommonViewModel @Inject constructor(
 
     suspend fun onCatClicked(catBreedsResponseItem: CatBreedsResponseItem) {
         currentCat = catBreedsResponseItem
-        viewModelScope.async {
+        CoroutineScope(Dispatchers.IO).async {
             isCurrentCatFav = getCatDetailsFromDBUseCase.invoke(currentCat!!.id) != null
         }.await()
         println("VMVM: ${currentCat?.id}");
@@ -40,11 +42,6 @@ class CommonViewModel @Inject constructor(
 
     fun onWebViewClicked(webviewURL:String){
         this.webviewURL=webviewURL
-    }
-
-    suspend fun isFavorited(cat: CatBreedsResponseItem): Boolean {
-        println("isFavorited called ${cat.id}");
-        return getCatDetailsFromDBUseCase.invoke(cat.id) != null
     }
 
 }

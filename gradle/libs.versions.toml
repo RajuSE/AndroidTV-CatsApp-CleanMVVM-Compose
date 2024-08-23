@@ -1,36 +1,36 @@
 [versions]
 accompanistSystemuicontroller = "0.31.4-beta"
-activityCompose = "1.5.1"
+activityCompose = "1.9.1"
 agp = "8.5.1"
-androidxJunit = "1.1.5"
+androidxJunit = "1.2.1"
 coilCompose = "2.6.0"
-composeBom = "2022.10.00"
+composeBom = "2024.08.00"
 coreSplashscreen = "1.0.1"
-datastorePreferences = "1.0.0"
-espressoCoreVersion = "3.5.1"
-foundation = "1.4.3"
-hiltAndroid = "2.45"
-hiltNavigationCompose = "1.0.0"
-kotlin = "1.7.20"
+datastorePreferences = "1.1.1"
+espressoCoreVersion = "3.6.1"
+foundation = "1.6.8"
+hiltAndroid = "2.51.1"
+hiltNavigationCompose = "1.2.0"
+kotlin = "2.0.0"
 coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 appcompat = "1.7.0"
-kotlinBom = "1.8.0"
+kotlinBom = "1.9.20"
 leanback = "1.0.0"
-lifecycleRuntimeKtx = "2.3.1"
+lifecycleRuntimeKtx = "2.8.4"
 lottie = "6.3.0"
 material = "1.12.0"
-activity = "1.9.0"
+activity = "1.9.1"
 constraintlayout = "2.1.4"
-navigationCompose = "2.6.0"
+navigationCompose = "2.7.7"
 pagingCompose = "3.3.1"
 pagingRuntime = "3.1.1"
 retrofit = "2.9.0"
 roomRuntime = "2.5.2"
 tvFoundation = "1.0.0-alpha11"
-tvMaterial = "1.0.0-rc02"
+tvMaterial = "1.0.0"
 material3Android = "1.2.1"
 
 [libraries]
@@ -79,3 +79,6 @@ androidx-material3-android = { group = "androidx.compose.material3", name = "mat
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version = "2.0.0-1.0.23" }
+dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "hiltAndroid" }

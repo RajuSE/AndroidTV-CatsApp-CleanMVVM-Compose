@@ -24,7 +24,7 @@ jobs:
      - name: Build and test
        run: |
         chmod +x gradlew
-        ./gradlew assembleRelease
+        ./gradlew assembleDebug
         ./gradlew test
 
      - name: Upload APK

@@ -12,15 +12,15 @@ import kotlinx.coroutines.flow.Flow
 interface CatsDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun upsert(cat: CatBreedsResponseItem)
+     fun upsert(cat: CatBreedsResponseItem)
 
     @Delete
-    suspend fun delete(cat: CatBreedsResponseItem)
+     fun delete(cat: CatBreedsResponseItem)
 
     @Query("SELECT * FROM CatBreedsResponseItem")
     fun getCats(): Flow<List<CatBreedsResponseItem>>
 
     @Query("SELECT * FROM CatBreedsResponseItem WHERE id=:id")
-    suspend fun getCat(id: String): CatBreedsResponseItem?
+     fun getCat(id: String): CatBreedsResponseItem?
 
 }

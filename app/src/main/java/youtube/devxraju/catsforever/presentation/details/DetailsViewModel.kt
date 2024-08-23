@@ -11,6 +11,8 @@ import youtube.devxraju.catsforever.domain.usecases.cats.GetCatDetailsFromDB
 import youtube.devxraju.catsforever.domain.usecases.cats.UpsertCat
 import youtube.devxraju.catsforever.util.UIComponent
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import youtube.devxraju.catsforever.util.DataState
 import javax.inject.Inject
@@ -31,7 +33,7 @@ class DetailsViewModel @Inject constructor(
     fun onEvent(event: DetailsEvent) {
         when (event) {
             is DetailsEvent.UpsertDeleteCat -> {
-                viewModelScope.launch {
+                CoroutineScope(Dispatchers.IO).launch {
                     println("UpsertDelete event: ${event.cat.id}")
                     val cat = getCatDetailsFromDBUseCase(id = event.cat.id)
                     if (cat == null){
@@ -52,7 +54,7 @@ class DetailsViewModel @Inject constructor(
         favoriteUnfav = DataState.FavoriteUnfav(false)
     }
 
-    private suspend fun upsertCat(cat: CatBreedsResponseItem) {
+    private fun upsertCat(cat: CatBreedsResponseItem) {
         upsertCatUseCase(cat = cat)
         favoriteUnfav = DataState.FavoriteUnfav(true)
     }
