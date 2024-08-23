@@ -5,7 +5,6 @@ plugins {
     alias(libs.plugins.ksp)
 
 
-    id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
     id("kotlin-parcelize")
 }
@@ -87,7 +86,7 @@ dependencies {
 
     //Dagger Hilt
     implementation(libs.hilt.android)
-    kapt(libs.hilt.compiler)
+    ksp(libs.hilt.compiler)
     implementation(libs.androidx.hilt.navigation.compose)
 
 
@@ -113,7 +112,7 @@ dependencies {
 
     //Room
     implementation(libs.androidx.room.runtime)
-    kapt(libs.androidx.room.compiler)
+    ksp(libs.androidx.room.compiler)
     implementation(libs.androidx.room.ktx)
 
     //Android TV

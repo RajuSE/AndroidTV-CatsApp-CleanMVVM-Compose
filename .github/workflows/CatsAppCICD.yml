@@ -10,7 +10,6 @@ jobs:
   build:
     name: Build and Test
     runs-on: ubuntu-latest
-
     steps:
      - name: Checkout code
        uses: actions/checkout@v2
@@ -21,7 +20,7 @@ jobs:
          java-version: 17
          distribution: 'temurin'
 
-     - name: Build and test
+     - name: Generate Debug-Apk and test
        run: |
         chmod +x gradlew
         ./gradlew assembleDebug
@@ -30,5 +29,11 @@ jobs:
      - name: Upload APK
        uses: actions/upload-artifact@v2
        with:
-           name: app-debug
+           name: app-debug.apk
            path: app/build/outputs/apk/debug/app-debug.apk
+
+     - name: Upload test report
+       uses: actions.upload-artifact@v2
+       with:
+        name: unit_test_report
+        path: app/build/reports/test/testDebugUnitTest/
